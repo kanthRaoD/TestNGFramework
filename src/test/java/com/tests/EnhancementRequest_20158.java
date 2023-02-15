@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class EnhancementRequest_20158 extends TestManager {
 
-    @Test(groups={"20158","reg_2022"})
+    @Test(groups={"20158","reg_2022","Smoke_test2023"})
     public void enhancementRequest(){
         HomePage homePage = new HomePage();
         SignInPage signInPage= new SignInPage();
