@@ -1,6 +1,5 @@
-com/macys/utils/TestManager.java
- com.macys.utils.TestManager
- com.macys.utils.TestManager$1
+com/macys/pages/page/WomenPage.java
+ com.macys.pages.page.WomenPage
 com/macys/pages/page/ProfilePage.java
  com.macys.pages.page.ProfilePage
 com/macys/utils/TestUtil.java
@@ -13,16 +12,17 @@ com/macys/utils/ExtentAppend.java
  com.macys.utils.ExtentAppend
 com/macys/pages/page/SignInPage.java
  com.macys.pages.page.SignInPage
-com/macys/utils/DriverSource.java
- com.macys.utils.DriverSource
+com/macys/pages/page/HomePage.java
+ com.macys.pages.page.HomePage
 com/macys/pages/common/BasePage.java
  com.macys.pages.common.BasePage
  com.macys.pages.common.BasePage$1
-com/macys/gcp/BqQuery.java
- com.macys.gcp.BqQuery
 com/macys/pages/page/CreateAccountPage.java
  com.macys.pages.page.CreateAccountPage
-com/macys/pages/page/HomePage.java
- com.macys.pages.page.HomePage
-com/macys/pages/page/WomenPage.java
- com.macys.pages.page.WomenPage
+com/macys/utils/TestManager.java
+ com.macys.utils.TestManager
+ com.macys.utils.TestManager$1
+com/macys/utils/DriverSource.java
+ com.macys.utils.DriverSource
+com/macys/gcp/BqQuery.java
+ com.macys.gcp.BqQuery
