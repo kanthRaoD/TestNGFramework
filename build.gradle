@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compile group: 'org.testng', name: 'testng', version: '6.14.3'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.8.0'
+    compile group: 'com.aventstack', name: 'extentreports', version: '3.1.5'
+    compile group: 'org.apache.poi', name: 'poi', version: '3.10.1'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.10.1'
+    compile group: 'org.apache.cxf', name: 'cxf-rt-ws-security', version: '3.1.0'
+    compile group: 'org.apache.cxf', name: 'cxf-rt-transports-http', version: '3.1.0'
+    compile group: 'commons-io', name: 'commons-io', version: '2.4'
+    compile group: 'io.rest-assured', name: 'rest-assured', version: '4.5.1'
+    compile group: 'log4j', name: 'log4j', version: '1.2.16'
+    implementation group: 'com.google.cloud', name: 'google-cloud-bigquery', version: '2.20.0'
+}
+
+test {
+    systemProperty 'test.env', System.getProperty('test.env')
+    systemProperty 'browser', System.getProperty('browser')
+    systemProperty 'includedGroups', System.getProperty('includedGroups')
+    systemProperty 'excludedGroups', System.getProperty('excludedGroups')
+    useTestNG(){
+        outputDirectory=file("$buildDir/test-output")
+        useDefaultListeners =true
+        /*includeGroups '20158'*/
+        includeGroups << System.getProperty("includedGroups").toString()
+        excludeGroups << System.getProperty("excludedGroups").toString()
+        /*options{
+            parallel ='classes'
+
+        }*/
+    }
+    testLogging {
+        showStandardStreams =true
+
+    }
+    reports.html.enabled=true
+    ignoreFailures = true
+}

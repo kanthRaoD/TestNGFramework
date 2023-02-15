@@ -1,0 +1,12 @@
+com/tests/restassured.java
+ com.tests.restassured
+com/api/RestApiRequest_3000.java
+ com.api.RestApiRequest_3000
+com/tests/EnhancementRequest_20158.java
+ com.tests.EnhancementRequest_20158
+com/gcp/GoogleTrendsData_1000.java
+ com.gcp.GoogleTrendsData_1000
+com/tests/CreateAccountAndLogin_20160.java
+ com.tests.CreateAccountAndLogin_20160
+com/tests/EnhancementRequest_20159.java
+ com.tests.EnhancementRequest_20159

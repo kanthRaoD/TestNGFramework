@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Gradle suite]" verbose="0">
+  <test thread-count="5" name="Gradle test(failed)" verbose="0">
+    <groups>
+      <run>
+        <include name="1000"/>
+        <exclude name="null"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.gcp.GoogleTrendsData_1000">
+        <methods>
+          <include name="newDriver"/>
+          <include name="tearDown"/>
+          <include name="googleTrendsData"/>
+          <include name="ClearExtentTest"/>
+        </methods>
+      </class> <!-- com.gcp.GoogleTrendsData_1000 -->
+    </classes>
+  </test> <!-- Gradle test(failed) -->
+</suite> <!-- Failed suite [Gradle suite] -->

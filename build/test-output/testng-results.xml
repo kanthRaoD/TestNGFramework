@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="9" total="10" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-02-15T12:15:35Z" name="Gradle suite" finished-at="2023-02-15T12:16:42Z" duration-ms="67413">
+    <groups>
+      <group name="20158">
+        <method signature="EnhancementRequest_20158.enhancementRequest()[pri:0, instance:com.tests.EnhancementRequest_20158@6e71047f]" name="enhancementRequest" class="com.tests.EnhancementRequest_20158"/>
+      </group> <!-- 20158 -->
+      <group name="reg_2022">
+        <method signature="EnhancementRequest_20158.enhancementRequest()[pri:0, instance:com.tests.EnhancementRequest_20158@6e71047f]" name="enhancementRequest" class="com.tests.EnhancementRequest_20158"/>
+      </group> <!-- reg_2022 -->
+    </groups>
+    <test started-at="2023-02-15T12:15:35Z" name="Gradle test" finished-at="2023-02-15T12:16:42Z" duration-ms="67413">
+      <class name="com.api.RestApiRequest_3000">
+        <test-method is-config="true" signature="ClearExtentTest()[pri:0, instance:com.api.RestApiRequest_3000@2a9f88ba]" started-at="2023-02-15T12:16:43Z" name="ClearExtentTest" finished-at="2023-02-15T12:16:50Z" duration-ms="7611" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClearExtentTest -->
+      </class> <!-- com.api.RestApiRequest_3000 -->
+      <class name="com.tests.EnhancementRequest_20158">
+        <test-method is-config="true" signature="newDriver()[pri:0, instance:com.tests.EnhancementRequest_20158@6e71047f]" started-at="2023-02-15T12:15:35Z" name="newDriver" finished-at="2023-02-15T12:15:40Z" duration-ms="5676" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newDriver -->
+        <test-method signature="enhancementRequest()[pri:0, instance:com.tests.EnhancementRequest_20158@6e71047f]" started-at="2023-02-15T12:15:40Z" name="enhancementRequest" finished-at="2023-02-15T12:16:39Z" duration-ms="58372" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enhancementRequest -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.tests.EnhancementRequest_20158@6e71047f]" started-at="2023-02-15T12:16:39Z" name="tearDown" finished-at="2023-02-15T12:16:42Z" duration-ms="3318" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=enhancementRequest status=SUCCESS method=EnhancementRequest_20158.enhancementRequest()[pri:0, instance:com.tests.EnhancementRequest_20158@6e71047f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tests.EnhancementRequest_20158 -->
+    </test> <!-- Gradle test -->
+  </suite> <!-- Gradle suite -->
+</testng-results>
