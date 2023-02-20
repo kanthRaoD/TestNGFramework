@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class restassured {
 
-    @Test(groups={"20161","reg_20"})
+    @Test(groups={"20161","reg_20","smoke_test"})
     public void test() {
 
         Response response = RestAssured.get("https://reqres.in/api/users?page=2");
