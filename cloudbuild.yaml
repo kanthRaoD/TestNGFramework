@@ -1,7 +1,13 @@
 steps:
-  - name: 'openjdk:11'
-    entrypoint: 'java'
-    args:
-      - '-Dbrowser=chrome', '-Dtest.env=qa', '-DincludedGroups=20158'
-      - '-jar'
-      - 'my-app.jar'
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/PROJECT_ID/IMAGE', '.']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/PROJECT_ID/IMAGE']
+# Deploy container image to Cloud Run
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['run', 'deploy', 'SERVICE-NAME', '--image', 'gcr.io/PROJECT_ID/IMAGE', '--region', 'REGION']
+images:
+- gcr.io/PROJECT_ID/IMAGE
