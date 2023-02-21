@@ -4,6 +4,8 @@ FROM openjdk:8-jdk-alpine
 # Set the working directory
 WORKDIR /app
 
+jar cf TestNGFramework.jar *.class
+
 # Copy the Java program to the container
 COPY TestNGFramework.jar /app
 
