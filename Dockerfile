@@ -1,16 +1,17 @@
-# Use an existing image as a base
-FROM openjdk:8-jdk-alpine
+# Use an official Java runtime as a parent image
+FROM openjdk:11-jre-slim
 
-# Set the working directory
+# Set the working directory to /app
 WORKDIR /app
 
-jar cf TestNGFramework.jar *.class
+# Copy the current directory contents into the container at /app
+COPY . /app
 
-# Copy the Java program to the container
-COPY TestNGFramework.jar /app
+# Set the environment variable for the VM argument
+ENV MY_VM_ARG_BROWSER=chrome
+ENV MY_VM_ARG_ENV=qa
+ENV MY_VM_ARG_GROUPS=20158
 
-# Set the VM arguments as an environment variable
-ENV JAVA_OPTS="-Dbrowser=chrome -Dtest.env=qa -DincludedGroups=20158"
+# Run the command to start the Java application with the VM argument
+CMD ["java", "-jar", "-Dbrowser=${MY_VM_ARG_BROWSER},-Dtest.env=${MY_VM_ARG_ENV},-DincludedGroups=${MY_VM_ARG_GROUPS}", "myapp.jar"
 
-# Set the default command
-CMD ["java", "-jar", "TestNGFramework.jar"]
